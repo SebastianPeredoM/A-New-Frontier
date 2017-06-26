@@ -9,9 +9,9 @@ import android.widget.ImageView;
 public class MiembrosSofthy {
     private String name;
     private int image;
-    public MiembrosSofthy(String name) {
+    public MiembrosSofthy(int image,String name) {
         this.setName(name);
-//        this.setImage(image);
+       this.setImage(image);
     }
 
     public String getName() {

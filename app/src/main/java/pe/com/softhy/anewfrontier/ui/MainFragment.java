@@ -54,10 +54,11 @@ public class MainFragment extends Fragment{
     private void setListMiembrosSofthy(){
         ArrayList<MiembrosSofthy> arrayMiembros = new ArrayList<>();
 
-        arrayMiembros.add(new MiembrosSofthy("Sebastian Peredo"));
-        arrayMiembros.add(new MiembrosSofthy(("Jhonatan Iberico")));
-        arrayMiembros.add(new MiembrosSofthy(("Jhonatan Meza")));
-        arrayMiembros.add(new MiembrosSofthy(("¡Minanaaayyaaa!")));
+        arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_peredo, "Sebastian Peredo"));
+        arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_iberico, "Jhonatan Iberico"));
+        arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_meza, "Jhonatan Meza"));
+        arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_minaya, "¡Minanaaayyaaa!"));
+        arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_frank, "Frank VO"));
 
         adapter.addAll(arrayMiembros);
     }
