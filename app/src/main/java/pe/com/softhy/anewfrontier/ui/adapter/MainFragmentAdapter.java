@@ -38,8 +38,8 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
     @Override
     public void onBindViewHolder(MainFragmentViewHolder holder, int position) {
         MiembrosSofthy currentMiembro = miembros.get(position);
-
-        holder.setMiembroName(currentMiembro.getName());
+        holder.image_item.setImageResource(miembros.get(position).getImage());
+        holder.name_item.setText(miembros.get(position).getName());
     }
 
     @Override
@@ -57,17 +57,12 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
 
     public class MainFragmentViewHolder extends RecyclerView.ViewHolder{
 
-        TextView  name_item;
-        ImageView image_item;
+        public TextView  name_item;
+        public ImageView image_item;
         public MainFragmentViewHolder(View itemView){
             super(itemView);
-
             image_item  = (ImageView) itemView.findViewById(R.id.foto_miembro);
             name_item   = (TextView) itemView.findViewById(R.id.nombre_miembro);
-        }
-
-        public void setMiembroName(String name){
-            name_item.setText(name);
         }
     }
 }
