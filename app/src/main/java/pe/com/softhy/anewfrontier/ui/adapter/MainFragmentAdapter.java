@@ -18,8 +18,9 @@ import pe.com.softhy.anewfrontier.R;
  * Created by Sebastian on 24/06/2017.
  */
 
-public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapter.MainFragmentViewHolder> {
+public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapter.MainFragmentViewHolder> implements View.OnClickListener {
 
+    private View.OnClickListener listener;
     List<MiembrosSofthy> miembros;
     Context context;
 
@@ -32,7 +33,19 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
     public MainFragmentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(context)
                 .inflate(R.layout.item_fragment_main, parent, false);
+
+        itemView.setOnClickListener(this);
         return new MainFragmentViewHolder(itemView);
+    }
+
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener=listener;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v != null)
+            listener.onClick(v);
     }
 
     @Override

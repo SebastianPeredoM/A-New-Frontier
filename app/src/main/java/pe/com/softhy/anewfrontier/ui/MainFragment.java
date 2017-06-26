@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,12 +27,20 @@ public class MainFragment extends Fragment{
 
     private RecyclerView mMainFragment;
     private MainFragmentAdapter adapter;
+    ArrayList<MiembrosSofthy> arrayMiembros;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         adapter = new MainFragmentAdapter(getActivity());
+
+        adapter.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "En construcción...", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Nullable
@@ -52,7 +61,7 @@ public class MainFragment extends Fragment{
     }
 
     private void setListMiembrosSofthy(){
-        ArrayList<MiembrosSofthy> arrayMiembros = new ArrayList<>();
+        arrayMiembros = new ArrayList<>();
 
         arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_peredo, "Sebastian Peredo"));
         arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_iberico, "Jhonatan Iberico"));
