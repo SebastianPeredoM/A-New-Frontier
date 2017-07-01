@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">A New Frontier</string>
+    <string name="LOG_TAG">LOG_TAG</string>
 </resources>

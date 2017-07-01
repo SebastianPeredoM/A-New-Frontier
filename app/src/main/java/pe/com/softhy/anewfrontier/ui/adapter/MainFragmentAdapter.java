@@ -2,6 +2,7 @@ package pe.com.softhy.anewfrontier.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,9 +62,9 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
     }
 
     public void addAll(ArrayList<MiembrosSofthy> miembros){
-        if(miembros == null)
-            throw  new NullPointerException("The items cannot be null");
-
+        if(miembros == null) {
+            throw new NullPointerException("La lista de miembros no puede ser null");
+        }
         this.miembros.addAll(miembros);
         notifyDataSetChanged();
     }

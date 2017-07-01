@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ public class MainFragment extends Fragment{
         adapter.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Log.i("AS", "Iberriiiicoooo");
                 Toast.makeText(getContext(), "En construcción...", Toast.LENGTH_SHORT).show();
             }
         });
@@ -66,7 +68,7 @@ public class MainFragment extends Fragment{
         arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_peredo, "Sebastian Peredo"));
         arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_iberico, "Jhonatan Iberico"));
         arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_meza, "Jhonatan Meza"));
-        arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_minaya, "¡Minanaaayyaaa!"));
+        arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_minaya, "¡Minnaaaayyaaa!"));
         arrayMiembros.add(new MiembrosSofthy(R.drawable.foto_frank, "Frank VO"));
 
         adapter.addAll(arrayMiembros);
